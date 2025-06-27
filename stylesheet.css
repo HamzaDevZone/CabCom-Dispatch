@@ -23,6 +23,22 @@ ul,a{
     justify-content: center;
     align-items: center;
 }
+.main-heading{
+    font-size: 4rem;
+    color: #00c6ff;
+}
+.sb-heading{
+    font-size: 2.5rem;
+}
+.body-text{
+    font-size: 1.3rem;
+}
+.graphic{
+    width: 35vw; height: 35vw;
+    background-color: #0a0f2c;
+    border-radius: 4rem;
+    padding: 4vw;
+}
 /* Nav bar styling */
 nav{
     width: 100vw; height: 10vh;
@@ -58,6 +74,9 @@ nav .fa-bars{
     font-size: 1.8rem;
 }
 @media (max-width: 800px){
+    html{
+        font-size: 8px;
+    }
     nav{
         width: 100vw; height: 10vh;
         padding: 0 8px 0 8px;
@@ -100,12 +119,6 @@ div#hs-text > *{
     border: 1px solid #00c6ff;
     justify-content: space-evenly;
 }
-#hs-graphic{
-    width: 35vw; height: 35vw;
-    background-color: #0a0f2c;
-    border-radius: 30px;
-    padding: 4vw;
-}
 @media (max-width: 800px) {
     #hero-section{
         width: 100vw; height: 90vh;
@@ -121,41 +134,36 @@ div#hs-text > *{
     .demo-btn{
         justify-self: center;
     }
-    #hs-graphic{
-        width: 5em; height: 5em;
+    .graphic{
+        width: 30rem; height: 30rem;
     }
 }
 /* Services section styling */
 #sc-section{
     width: 100vw; height: 100vh;
     flex-direction: column;
-    font-size: 1vw;
+    font-size: 2vw;
     text-align: center;
     color: #f4f7fb;
     background-color: #0a0f2c;
-    padding: 0 3vw 0 3vw;
+    padding: 0 4vw 0 4vw;
 }
-.main-heading{
-    font-size: 6em;
-    color: #00c6ff;
-}
-.sb-heading{
-    font-size: 2.6em;
-    margin-top: 1em;
+#sc-section > *{
+    margin-top: 1rem;
 }
 .mobile-br{
     display: none;
 }
-#sc-section p{
-    font-size: 1.6em;
+#sc-section .body-text{
+    width: 60vw;
 }
 #sol-boxes{
     width: 65vw; height: 12vh;
     justify-content: space-evenly;
-    font-size: 2vw;
+    font-size: 2rem;
 }
 #sol-boxes div,h6{
-    font-size: 1em;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 #software-imgs{
@@ -164,22 +172,21 @@ div#hs-text > *{
 }
 .software-logo{
     width: 20%;
-    margin: 0.5em;
+    margin: 0.7em;
 }
 @media (max-width: 800px){
-    #sc-section{
-        width: 100vw; height: 100vh;
-        font-size: 2.2vw;
+    #sc-section .body-text{
+        width: 90vw;
+    }
+    #sc-section > *{
+        margin-top: 4rem;
     }
     #sol-boxes{
-        width: 80vw; height: 15vh;
-        font-size: 6vw;
+        width: 90vw; height: 15vh;
+        padding: 0 4rem;
+        font-size: 2rem;
         font-weight: 200;
         flex-wrap: wrap;
-    }
-    #sol-boxes div h6{
-        font-size: 0.8em;
-        font-weight: 300;
     }
     .mobile-br{
         display: inline;
@@ -191,5 +198,49 @@ div#hs-text > *{
     .software-logo{
         width: 40%;
         margin: 1em;
+    }
+}
+/* About section styling */
+#about-section{
+    width: 100vw; height: 100vh;
+    flex-direction: column;
+    font-size: 2vw;
+    text-align: left;
+    color: #0a0f2c;
+    background-color: #f4f7fb;
+    padding: 0 3vw 0 3vw;
+}
+#about-section .container{
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4em;
+}
+#about-section .body-text{
+    width: 50vw;
+}
+#about-section .sb-heading{
+    font-size: 1.4rem;
+}
+#about-section .graphic{
+    width: 30vw; height: 30vw;
+}
+@media (max-width: 800px){
+    #about-section{
+        font-size: 0.1vw;
+        padding: 0;
+    }
+    #about-section .container{
+        height: 80vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+    #about-section .body-text{
+        width: 90vw;
+        margin-top: 1.5rem;
+    }
+    #about-section .graphic{
+        width: 30rem; height: 30rem;
     }
 }
