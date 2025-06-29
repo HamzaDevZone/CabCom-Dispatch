@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="d-flex">
+    <section id="form-container" class="d-flex">
+        <div class="graphic d-flex">
+            <img src="Assest/logo (2).png" alt="" height="80%">
+            <a href="index.html"><button>Go Back</button></a>
+        </div>
+        <div class="demo-form d-flex">
+            <form action="https://formspree.io/f/xblyqvev" method="POST" class="d-flex">
+                <h2 class="title d-flex">For Free Demo</h2>
+                <div>
+                    <h4>First Name</h4>
+                    <input type="text" name="f-name" required placeholder="First Name">
+                </div>
+                <div>
+                    <h4>Last Name</h4>
+                    <input type="text" name="l-name" required placeholder="Last Name">
+                </div>
+                <div>
+                    <h4>Email Address</h4>
+                    <input type="email" name="email" required placeholder="Enter Your Email">
+                </div>
+                <div>
+                    <h4>Contact Number</h4>
+                    <input id="customInput" type="text" name="contact" required placeholder="+xxx xxxx-xxx-x">
+                </div>
+                <div>
+                    <h4>Your Country</h4>
+                    <input type="text" name="country" required placeholder="Your Country">
+                </div>
+                <div>
+                    <h4>Your City</h4>
+                    <input type="text" name="city" required placeholder="Your City">
+                </div>
+                <div id="textArea">
+                    <label for="message"><h3>Your Message</h3></label><br>
+                    <textarea name="message" id="message" placeholder="Write Your Massage Here"></textarea> 
+                </div>
+                <div class="form-btn d-flex">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+        </div>
+        
+    </section>
+    <script>
+        document.getElementById("customInput").addEventListener("input", function () {
+            // Allow numbers (0-9) and special characters !@#$%^&*()_+-=
+            this.value = this.value.replace(/[^0-9!@#$%^&*()_+\-=👦👦{};':"\\|,.<>\/?\s]/g, '');
+        });
+    </script>   
+</body>
+</html>
