@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
 </head>
 <body>
+        <div id="whatsapp-cta" class="d-flex">
+            <a href="https://wa.me/+447365575801" target="_blank"><i class="fa-brands fa-whatsapp"> </i>&nbsp;&nbsp;WhatsApp</a>
+        </div>
     <nav>
         <div id="nav-logo" class="d-flex">
             <img src="Assest/logo.png" alt="logo" width="70rem">
@@ -16,18 +19,27 @@
         </div>
         <div>
             <ul class="navigation d-flex">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Privacy</a></li>
+                <li><a class="scroll-link" href="#">Home</a></li>
+                <li><a class="scroll-link" href="#sc-section">Services</a></li>
+                <li><a class="scroll-link" href="#about-section">About Us</a></li>
+                <li><a class="scroll-link" href="#">Reviews</a></li>
+                <li><a class="scroll-link" href="#">Privacy</a></li>
             </ul>
         </div>
+        <script>
+            document.querySelectorAll('.scroll-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        </script>
         <div id="nav-cta" class="d-flex">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-solid fa-bars"></i>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61577144812090" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/+447365575801" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
     <!-- Hero section  -->
@@ -102,6 +114,11 @@
             </div>
         </div>
      </section>
+     <footer class="d-flex">
+        <div class="graphic">
+            <img src="Assest/logo.png" alt="" width="100%">
+        </div>
+     </footer>
     <script src="app.js"></script> 
 </body> 
 </html>
